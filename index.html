@@ -79,10 +79,8 @@
         .section-header-glow {
             text-shadow: 0 0 15px rgba(251, 191, 36, 0.4); /* Brillo dorado estático */
         }
-
-        /* --- ANIMACIÓN DE BRILLO PULSANTE PARA EL ESLOGAN (Eliminada) --- */
         
-        /* --- BRILLO ESTÁTICO PARA ESLOGAN (Nuevo) --- */
+        /* --- BRILLO ESTÁTICO PARA ESLOGAN --- */
         .slogan-static-glow {
             /* Se define un estado base del filtro */
             filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.5));
@@ -95,6 +93,20 @@
             stroke: #fcd34d; /* amber-300 */
             filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5));
             stroke-width: 1;
+        }
+
+        /* Estilo para iconos de redes sociales en el footer */
+        .social-icon {
+            width: 40px; /* Tamaño fijo */
+            height: 40px; /* Tamaño fijo */
+            object-fit: contain; /* Asegura que la imagen se vea bien */
+            border-radius: 8px; /* Ligeramente redondeado para el icono de Insta */
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0)); /* Sin brillo por defecto */
+        }
+        .social-icon:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.7)); /* Brillo dorado al pasar el ratón */
         }
     </style>
 </head>
@@ -218,7 +230,7 @@
                     <!-- Icono Dorado -->
                     <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c1.355 0 2.707-.158 4.017-.465M12 21c-1.355 0-2.707-.158-4.017-.465M12 3c1.355 0 2.707.158 4.017.465M12 3c-1.355 0-2.707.158-4.017-.465M12 3c1.38 0 2.717.208 4.008.586M12 3c-1.38 0-2.717.208-4.008.586m16.016 9.016c.09.23.155.466.216.706m-16.032 0c-.06-.24-.126-.476-.216-.706m16.584 0a9.004 9.004 0 00-8.716-6.747m-8.716 6.747a9.004 9.004 0 018.716-6.747M12 5.25v.007" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c1.355 0 2.707-.158 4.017-.465M12 21c-1.355 0-2.707-.158-4.017-.465M12 3c1.355 0 2.707.158 4.017.465M12 3c-1.355 0-2.707-.158-4.017-.465M12 3c1.38 0 2.717.208 4.008.586M12 3c-1.38 0-2.717.208-4.008.586m16.016 9.016c.09.23.155.466.216.706m-16.032 0c-.06-.24-.126-.476-.216-.706m16.584 0a9.004 9.004 0 00-8.716-6.747m-8.716 6.747a9.004 9.004 0 018.716-6.747M12 5.25v.007" />
                         </svg>
                     </div>
                     <h3 class="mt-4 text-2xl font-bold text-amber-300 service-header-glow">Atención Prioritaria a Grupos Vulnerables</h3>
@@ -396,6 +408,24 @@
     <!-- Footer -->
     <footer class="bg-gray-950">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Iconos de Redes Sociales -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61581011692277" target="_blank" rel="noopener noreferrer">
+                    <img src="facebook.png" alt="Facebook" class="social-icon">
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/retana.abogado/" target="_blank" rel="noopener noreferrer">
+                    <img src="Instagram.png" alt="Instagram" class="social-icon">
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/mauricio-gudi%C3%B1o-a99a5b382/" target="_blank" rel="noopener noreferrer">
+                    <img src="linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+            </div>
+
+            <!-- Texto de Copyright -->
             <p class="text-gray-400 text-sm">&copy; 2025 GudiñoRetana & Asociados. Todos los derechos reservados.</p>
             <p class="text-gray-500 text-xs mt-2">La confianza no se gana, se construye con resultados.</p>
         </div>
@@ -403,3 +433,6 @@
 
 </body>
 </html>
+<script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/11/15/05/20251115053833-IMS2K3PO.js" defer></script>
+
