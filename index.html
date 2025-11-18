@@ -343,13 +343,17 @@
                 <div class="p-8 sm:p-12 lg:p-16">
                     <h2 class="text-4xl font-extrabold text-gray-100 section-header-glow">Agenda tu Consulta</h2>
                     <p class="mt-4 text-lg text-gray-300">Garantizamos absoluta confidencialidad desde el primer contacto. Envíenos un mensaje y nos comunicaremos a la brevedad.</p>
-                    <form action="#" method="POST" class="mt-8 grid grid-cols-1 gap-y-6">
+                    
+                    <!-- ===== FORMULARIO ACTUALIZADO CON FORMSPREE ===== -->
+                    <form action="https://formspree.io/f/xovraeze" method="POST" class="mt-8 grid grid-cols-1 gap-y-6">
                         <div>
                             <label for="full-name" class="sr-only">Nombre Completo</label>
-                            <input type="text" name="full-name" id="full-name" autocomplete="name" class="block w-full shadow-md py-4 px-6 placeholder-gray-400 border rounded-xl transition duration-300 bg-gray-800 text-white border-amber-500/50 shadow-xl shadow-amber-500/25 focus:ring-amber-400 focus:border-amber-400 focus:shadow-2xl focus:shadow-amber-500/50" placeholder="Nombre Completo" required>
+                            <!-- Se usa name="name" para compatibilidad estándar -->
+                            <input type="text" name="name" id="full-name" autocomplete="name" class="block w-full shadow-md py-4 px-6 placeholder-gray-400 border rounded-xl transition duration-300 bg-gray-800 text-white border-amber-500/50 shadow-xl shadow-amber-500/25 focus:ring-amber-400 focus:border-amber-400 focus:shadow-2xl focus:shadow-amber-500/50" placeholder="Nombre Completo" required>
                         </div>
                         <div>
                             <label for="email" class="sr-only">Email</label>
+                            <!-- name="email" es requerido por Formspree para la respuesta -->
                             <input id="email" name="email" type="email" autocomplete="email" class="block w-full shadow-md py-4 px-6 placeholder-gray-400 border rounded-xl transition duration-300 bg-gray-800 text-white border-amber-500/50 shadow-xl shadow-amber-500/25 focus:ring-amber-400 focus:border-amber-400 focus:shadow-2xl focus:shadow-amber-500/50" placeholder="Email" required>
                         </div>
                         <div>
@@ -433,5 +437,7 @@
 
 </body>
 </html>
+
     <script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2025/11/15/05/20251115053833-IMS2K3PO.js" defer></script>
+    
